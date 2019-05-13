@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Calculator {
     public double plus(int x, int y) {
         return x + y;
@@ -15,7 +17,6 @@ public class Calculator {
         return x / y;
     }
 
-<<<<<<< HEAD
 
     public int factorial(int x) {
         int result = 1;
@@ -47,21 +48,10 @@ public class Calculator {
         double result;
 
         result = Math.pow(double_x, double_y);
-=======
-    // https://sourcemaking.com/refactoring/inline-temp
-    // inline temp
-    public double pow(int x, int y) {
-        double double_x = (double)x;
-        double double_y = (double)y;
-        double result;
-
-        result = Math.pow(double_x,double_y);
->>>>>>> 7d90ec79f8caa2afe06a2b8b116f88921a8192fb
 
         return result;
     }
 
-<<<<<<< HEAD
     public double powAfter(int x, int y) {
         return Math.pow((double) x, (double) y);
     }
@@ -86,12 +76,5 @@ public class Calculator {
         int area = (int) mul(x, y);
         return area;
     }
-=======
-    //    이걸로 바꾸기 가능
-    //    public double pow(int x, int y) {
-    //        return Math.pow((double)x,(double)y);
-    //    }
-
->>>>>>> 7d90ec79f8caa2afe06a2b8b116f88921a8192fb
 
 }
