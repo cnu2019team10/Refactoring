@@ -17,17 +17,64 @@ public class Calculator {
         return x / y;
     }
 
-    //https://sourcemaking.com/refactoring/replace-magic-number-with-symbolic-constant
-    // 리팩토링 기술 중 Replace Magic Number with Symbolic Constant 사용함.
-    public double CircleArea_before(int x){
+
+    public int factorial(int x) {
+        int result = 1;
+
+        for (int i = x; i >= 1; i--) {
+            result = result * i;
+        }
+
+        return result;
+    }
+
+    public int factorialAfter(int x) {
+        if (x <= 1)
+            return x;
+        else
+            return factorialAfter(x - 1) * x;
+    }
+
+
+    public double sqrt(int x) {
+        double want_sqrt = Math.sqrt(x);
+        return want_sqrt;
+    }
+
+
+    public double pow(int x, int y) {
+        double double_x = (double) x;
+        double double_y = (double) y;
+        double result;
+
+        result = Math.pow(double_x, double_y);
+
+        return result;
+    }
+
+    public double powAfter(int x, int y) {
+        return Math.pow((double) x, (double) y);
+    }
+
+    public double CircleArea(int x) {
         return x * x * 3.14;
-
-        //이런식으로 PI값으로 잘 알려진 특별한 의미의 숫자값을 직접사용하고 있다면
-        //아래처럼 해당 숫자값의 의미를 나타내는 이름을 가진 상수를 만들어 대체하는 것이 좋음.
     }
 
-    static final double PI_circlerate = 3.14;  //3.14라는 값이 원주율임을 나타내줌.
-    public double CircleArea_after(int x){
-        return x * x * PI_circlerate;
+    static final double PI_Circle = 3.14;
+
+    public double CircleAreaAfter(int x) {
+        return x * x * PI_Circle;
     }
+
+    public int randomDice() {
+        double dice = (Math.random() * 6);
+        int dice_ = (int) dice;
+        return dice_;
+    }
+
+    public int RectangleArea(int x, int y) {
+        int area = (int) mul(x, y);
+        return area;
+    }
+
 }
