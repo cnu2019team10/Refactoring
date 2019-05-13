@@ -1,10 +1,15 @@
 import org.junit.Test;
 
+<<<<<<< HEAD
 import static org.junit.Assert.*;
+=======
+import static org.junit.Assert.assertTrue;
+>>>>>>> 7d90ec79f8caa2afe06a2b8b116f88921a8192fb
 
 public class CalculatorTest {
 
     @Test
+<<<<<<< HEAD
     public void IsCorrectFactorial() {
         Calculator calculator = new Calculator();
         int result = calculator.factorial(4);
@@ -34,3 +39,12 @@ public class CalculatorTest {
     }
 
 }
+=======
+    public void CalculatorPowTest() {
+        Calculator cal = new Calculator();
+        double result = cal.pow(4,2);
+        assertTrue(result == 16);
+    }
+
+}
+>>>>>>> 7d90ec79f8caa2afe06a2b8b116f88921a8192fb
